@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // (Math.random)小於 0 的隨機小數 *100 後無條件進位(Math.floor)
+        console.log(Math.round(Math.random() * 100))
+
+
+        // 老師解法
+        // for (let i = 0; i < 100; i++) {
+        //     console.log(Math.round(Math.random() * 100))
+        // }
+
+
+        const rand = (min, max) => {
+            // (max-min)判斷兩數之間相差多少
+            // +min 把扣掉的數值加回來
+            return Math.round(Math.random() * (max - min)) + min
+        }
+
+        for (let i = 0; i < 100; i++) {
+            console.log(rand(150, 200))
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
